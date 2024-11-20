@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Luis Ubillus Tarea 1</title>
+</head>
+<body>
+    <header>
+
+        <h1>ITECSUR</h1>
+        <H2>Tarea 1 Desarrollo app moviles</H2>
+        <h2>Luis Ubillus 3ro TSDS</h2>
+        <h2>Tutor: Darwin Chamba</h2>
+    </header>
+    <main>
+       <div class="contenedor">
+            <h3>1 Mayor menor</h3>
+            <p>
+                o	Escribe un programa que solicite un número y determine si es mayor o menor que 10.
+            </p>
+            <input type="text" placeholder="Ingrese numero " id="numMayorMenor" >
+            <button id="" onclick="mayorMenor()">Calcular</button>
+            <p id="mayorMenor">Resultado</p>
+            <hr>
+       </div>
+       <div class="contenedor">
+            <h3>2 Numero positivo negativo</h3>
+            <p>
+                o	Solicita al usuario un número y determina si es positivo, negativo o cero.        <p>
+            </p>
+            <input type="text" placeholder="Ingrese numero " id="numeroPositivoNegativo" >
+            <button id="" onclick="positivoNegativo()">Calcular</button>
+            <p id="resultadoPositivoNegativo">Resultado</p>
+            <hr>
+       </div>
+       <div class="contenedor">
+            <h3>3 Par o impar</h3>
+            <p>
+                o	Solicita un número al usuario y determina si es par o impar.   <p>
+            </p>
+            <input type="text" placeholder="Ingrese numero " id="numeroParImpar" >
+            <button id="" onclick="parImpar()">Calcular</button>
+            <p id="resultadoParImpar">Resultado</p>
+            <hr>
+       </div>
+       <div class="contenedor">
+            <h3>4 Aprobado o reprobado</h3>
+            <p>o	Solicita la calificación de un estudiante y determina si está aprobado (mayor o igual a 7) o reprobado.  <p>
+            </p>
+            <input type="text" placeholder="Ingrese una nota " id="notaAprobadoRep" >
+            <button id="" onclick="aprobadoReprobado()">Calcular</button>
+            <p id="resultadoAproRep">Resultado</p>
+            <hr>
+       </div>
+        <div class="contenedor">
+            <h3>5 Decuento</h3>
+            <p>o	Una tienda ofrece un 20% de descuento si el cliente gasta más de $100. Escribe un programa que calcule el monto final.reprobado.  <p>
+            <input type="text" placeholder="Ingrese monto producto " id="gastoCliente" >
+            <button id="" onclick="calcularDecuento()">Calcular</button>
+            <p id="valorDescuento">Resultado</p>
+            <hr>  
+        </div>
+        <div class="contenedor">
+            <h3>6 Habilitado para votar</h3>
+            <p>o	Solicita la edad del usuario y determina si es elegible para votar (mayor o igual a 18 años).</p>
+            <input type="text" placeholder="Ingrese su edad " id="edadVotante" >
+            <button id="" onclick="habilitadoParaVotar()">Calcular</button>
+            <p id="puedeVotar">Resultado</p>
+            <hr>  
+        </div>
+        <div class="contenedor">
+            <h3>7 Mayor de 3 numeros</h3>
+            <p>o	Solicita tres números y determina cuál es el mayor.</p>
+            <input type="text" placeholder="Ingrese nmero 1 " id="numMayor1" >
+            <input type="text" placeholder="Ingrese nmero 2 " id="numMayor2" >
+            <input type="text" placeholder="Ingrese nmero 3 " id="numMayor3" >
+            <button id="" onclick="mayorDe3Numeros()">Calcular</button>
+            <p id="numeroMayor">Resultado</p>
+            <hr>  
+        </div>
+        <div class="contenedor">
+            <h3>8 Clasificacion edades</h3>
+            <p>o	Solicita una edad y clasifica al usuario como niño (0-12), adolescente (13-17) o adulto (18+).</p>
+            <input type="text" placeholder="Ingrese su edad " id="edadClasificacion" >
+            <button id="" onclick="clasificarEdades()">Calcular</button>
+            <p id="edadClasificada">Resultado</p>
+            <hr>  
+        </div>
+        <div class="contenedor">
+            <h3>9 Calculadora basica</h3>
+            <p>o	Solicita dos números y una operación (+, -, *, /) y realiza el cálculo correspondiente.</p>
+            <input type="text" placeholder="Numero 1 " id="num1Calc" >
+            <input type="text" placeholder="Numero 2 " id="num2Calc" >
+            <button id="suma" onclick="calculadora(event)">+</button>
+            <button id="rsta"  onclick="calculadora(event)">-</button>
+            <button id="mult"  onclick="calculadora(event)">*</button>
+            <button id="div"  onclick="calculadora(event)">/</button>
+            <p id="resCalc"  >Resultado</p>
+            <hr>  
+        </div>
+        <div class="contenedor">
+            <h3>10 Determinar anio bisiesto</h3>
+            <p>o	Solicita un año y determina si es bisiesto (divisible entre 4 pero no entre 100, excepto si es divisible entre 400).</p>
+            <input type="text" placeholder="Ingrese anio " id="anioBiciestoIngresado" >
+            <button id="" onclick="calculaAnioBiciesto()">Calcular</button>
+            <p id="esBiciesto">Resultado</p>
+            <hr>  
+        </div>
+        <div class="contenedor">
+            <h3>11 Validar contrasenia</h3>
+            <p>o	Escribe un programa que solicite una contraseña y valide si es correcta (ejemplo: contraseña fija es 12345).</p>
+            <input type="password" placeholder="Ingrese password " id="password" >
+            <button id="" onclick="verificarPassword()">Calcular</button>
+            <p id="accesoPassword">Resultado</p>
+            <hr>  
+        </div>
+        <div class="contenedor">
+            <h3>12 Adivina numero</h3>
+            <p>o	Genera un número aleatorio entre 1 y 10 y solicita al usuario que adivine el número. Usa if para verificar si acertó o no.</p>
+            <input type="text" placeholder="Ingrese un numero " id="numeroAdivinar" >
+            <button id="" onclick="adivinaNumero()">Calcular</button>
+            <p id="numeroAdivinado">Resultado</p>
+            <hr>  
+        </div>
+        <div class="contenedor">
+            <h3>13 Calcular el signo zodiacal</h3>
+            <p>Solicita el día y mes de nacimiento y determina el signo zodiacal del usuario.</p>
+            <input type="text" placeholder="12, Septiembre " id="fechaZodiaco" >
+            <button id="" onclick="singoZodiacal()">Calcular</button>
+            <p id="mostrarSigno">Resultado</p>
+            <hr>  
+        </div>
+        <div class="contenedor">
+            <h3>14 Sistema de calificaciones</h3>
+            <p>        ◦ Solicita una calificación numérica y devuelve la letra correspondiente:
+                ▪ 90-100: A.
+                ▪ 80-89: B.
+                ▪ 70-79: C.
+                ▪ 60-69: D.
+                ▪ Menor a 60: F.</p>
+            <input type="text" placeholder="Ingrese calf 0 - 100 " id="numeroCalificacion" >
+            <button id="" onclick="sistemaCalificacion()">Calcular</button>
+            <p id="letraCalificacion">Resultado</p>
+            <hr>  
+        </div>
+        <div class="contenedor">
+            <h3>15 Control de acceso</h3>
+            <p>Solicita un nombre de usuario y contraseña, y valida si ambos son correctos.</p>
+            <input type="text" placeholder="usuario " id="accesoUsuario" >
+            <input type="password" placeholder="password " id="accesoPass" >
+            <button id="" onclick="controlAcceso()">Calcular</button>
+            <p id="acceso">Resultado</p>
+            <hr>  
+        </div>
+        <div class="contenedor">
+            <h3>Mostrar del 1 al 10</h3>
+           
+            <p id="mostrarSerie" >Resultado</p>
+            <hr>  
+        </div>
+        <div class="contenedor">
+            <h3>Suma de 10 primeros numeros 0 al 9</h3>
+           
+            <p id="suma10numeros" >Resultado</p>
+            <hr>  
+        </div>
+        
+        <div class="contenedor">
+            <h3>16 Tabla se multiplicar</h3>
+                <p>Solicita un número al usuario y muestra su tabla de multiplicar del 1 al 10.</p>
+            <input type="text" placeholder="usuario " id="numeroTabla" >
+            <button id="" onclick="tablaMultiplicar()">Calcular</button>
+            <div id="tablaMultiplicar">Resultado</div>
+            <hr>  
+        </div>
+        
+        <div class="contenedor">
+            <h3>Suma 20 primeros  numeros pares</h3>
+           
+            <p id="suma20pares" >Resultado</p>
+            <hr>  
+        </div>
+        <div class="contenedor">
+            <h3>Contador negativo</h3>
+           
+            <p id="contadorNegativo" >Resultado</p>
+            <hr>  
+        </div>
+        <div class="contenedor">
+            <h3>Factorial de un numero</h3>
+            <p>Encontrar el factorial de un numero</p>
+            <input type="text" placeholder="Ingrese numero " id="numeroFactorial" >
+            <button id="" onclick="factorial()">Calcular</button>
+            <p id="resultadoFactorial">Resultado</p>
+            <hr>  
+        </div>
+        <div class="contenedor">
+            <h3>Numeros primos</h3>
+            <p>Encuentra los 50 primeros numeros primos</p>
+            <p id="numerosPrimos">Resultado</p>
+            <hr>  
+        </div>
+        <div class="contenedor">
+            <h3>Suma de digitos</h3>
+            <p>Solicita un número entero y calcula la suma de sus dígitos.</p>
+            <input type="text" placeholder="Ingrese numero " id="numeroSumaDigitos" >
+            <button id="" onclick="sumaDigitos()">Calcular</button>
+            <p id="mostrarSumaDigitos">Resultado</p>
+            <hr>  
+        </div>
+        <div class="contenedor">
+            <h3>Invertir un numero</h3>
+            <p>Solicita un número entero y muestra su versión invertida..</p>
+            <input type="text" placeholder="Ingrese numero para invertirlo " id="numeroInvertir" >
+            <button id="" onclick="invertirNumero()">Calcular</button>
+            <p id="numeroInvertido">Resultado</p>
+            <hr>  
+        </div>
+        <div class="contenedor">
+            <h3>Promedio de calificaciones</h3>
+            <p>Solicita calificaciones al usuario (hasta que ingrese -1) y calcula el promedio.</p>
+            <button id="" onclick="promedioCalificaciones()">Empezar</button>
+            <hr>  
+        </div>
+        <div class="contenedor">
+            <h3>Saludo personalizado</h3>
+            <p>Crea una función que reciba un nombre como parámetro y retorne un saludo.</p>
+            <input type="text" placeholder="Ingrese su nombre" id="numbreSaludo">
+            <button id="" onclick="daludoPersonalizado()">Calcular</button>
+            <hr>  
+        </div>
+        <div class="contenedor">
+            <h3>Suma dos numeros</h3>
+            <p>Crea una función que reciba un nombre como parámetro y retorne un saludo.</p>
+            <input type="text" placeholder="Ingrese su nombre" id="sumaNum1">
+            <input type="text" placeholder="Ingrese su nombre" id="sumaNum2">
+            <button id="" onclick="sumaDosNumeros()">Calcular</button>
+            <hr>  
+        </div>
+        <div class="contenedor">
+            <h3>Numero par o impar  </h3>
+            <p>Crea una función que reciba un número y retorne True si es par y False si es impar.</p>
+            <input type="text" placeholder="Ingrese su nombre" id="parOImpar">
+            <button id="" onclick="parOImpar()">Calcular</button>
+            <hr>  
+        </div>
+        <div class="contenedor">
+            <h3>Calcular cuadrado  </h3>
+            <p>Escribe una función que reciba un número y retorne su cuadrado.</p>
+            <input type="text" placeholder="Ingrese su nombre" id="numeroCuadrado">
+            <button id="" onclick="calcularCuadrado()">Calcular</button>
+            <hr>  
+        </div>
+        <div class="contenedor">
+            <h3>Calcular area circulo  </h3>
+            <p>Crea una función que reciba el radio de un círculo y retorne su área.</p>
+            <input type="text" placeholder="Ingrese un radio" id="radio">
+            <button id="" onclick="calculaAreaCirculo()">Calcular</button>
+            <hr>  
+        </div>
+    </main>
+
+    <script>
+        //Ejercicio 1
+        const mayorMenor=()=>{
+            num=Number(document.getElementById('numMayorMenor').value)            
+            if(num || num==0){
+                if(num>10){
+                    document.getElementById("mayorMenor").textContent='Es MAYOR que 10'
+                    return
+                }
+                    
+                document.getElementById("mayorMenor").textContent='Es MENOR que 10'
+            }
+            
+            
+        }
+        const positivoNegativo=()=>{
+            num=Number(document.getElementById('numeroPositivoNegativo').value)   
+                 
+                resultado='En el numero cero'    
+                console.log(num);
+            if(num || num==0){
+                if(num>0){
+                    resultado='Es un numero positivo'
+                }if(num<0){
+                    resultado='Es un numero negativo'
+                }
+                    
+                document.getElementById("resultadoPositivoNegativo").textContent=resultado
+            }
+        }
+        const parImpar=()=>{
+            num=Number(document.getElementById('numeroParImpar').value)            
+            if(num || num==0){
+                if(num%2==0){
+                    document.getElementById("resultadoParImpar").textContent='Es PAR '
+                    return
+                }
+                    
+                    document.getElementById("resultadoParImpar").textContent='Es IMPAR '
+            }
+            
+            
+        }
+        const aprobadoReprobado=()=>{
+            num=Number(document.getElementById('notaAprobadoRep').value)                 
+            if(num || num==0){
+                if(num>=7){
+                    document.getElementById("resultadoAproRep").textContent='Aprobado '
+                    return
+                }
+                    
+                    document.getElementById("resultadoAproRep").textContent='Reprobado '
+            }
+            
+            
+        }
+        const calcularDecuento=()=>{
+            valor=Number(document.getElementById('gastoCliente').value)
+                 
+            if(valor || valor==0){
+                if(valor>100){
+                    const descuento=valor-valor*0.20
+                    document.getElementById("valorDescuento").textContent='Con descuento : $'+descuento
+                    return
+                }
+                    
+                    document.getElementById("valorDescuento").textContent='Sin descuento : $'+valor
+            }
+            
+        }
+        const habilitadoParaVotar=()=>{
+            edad=Number(document.getElementById('edadVotante').value)
+                 
+            if(edad || edad==0){
+                if(edad>=18){
+                    document.getElementById("puedeVotar").textContent='Puedes votar'
+                    return
+                }
+                    
+                document.getElementById("puedeVotar").textContent='NO puedes votar'
+            }
+            
+        }
+        const mayorDe3Numeros=()=>{
+            numMayor1=Number(document.getElementById('numMayor1').value)
+            numMayor2=Number(document.getElementById('numMayor2').value)
+            numMayor3=Number(document.getElementById('numMayor3').value)
+            
+            let respuesta='El numero mayor es: '+numMayor1
+            if((numMayor1 && numMayor2 && numMayor3) ){
+                if(numMayor2>numMayor1 && numMayor2>numMayor3){
+                    respuesta='El numero mayor es: '+numMayor2
+                }
+                
+                if(numMayor3>numMayor1 && numMayor3>numMayor2){
+                    respuesta='El numero mayor es: '+numMayor3
+                }
+                document.getElementById("numeroMayor").textContent=respuesta
+            }
+            
+        }
+        const clasificarEdades=()=>{
+            edad=Number(document.getElementById('edadClasificacion').value)
+                 
+            if(edad || edad==0){
+                if(edad>=0 && edad <=12){
+                    document.getElementById("edadClasificada").textContent='Eres nino'
+                    return
+                }else if(edad>=13 && edad <=17){
+                    document.getElementById("edadClasificada").textContent='Eres adolecente'
+                    return
+                }else{
+                    document.getElementById("edadClasificada").textContent='Eres adulto'
+                }
+                    
+            }
+            
+        }
+       const calculadora=(event)=>{
+        num1Calc=Number(document.getElementById('num1Calc').value)
+        num2Calc=Number(document.getElementById('num2Calc').value)
+        console.log(num1Calc);
+        
+        if(event.target.textContent=='+'){
+            document.getElementById('resCalc').textContent='Resultado: '+(num1Calc+num2Calc)
+        }
+        if(event.target.textContent=='-'){
+            document.getElementById('resCalc').textContent='Resultado: '+(num1Calc-num2Calc)
+        }
+        if(event.target.textContent=='*'){
+            document.getElementById('resCalc').textContent='Resultado: '+(num1Calc*num2Calc)
+        }
+        if(event.target.textContent=='/'){
+            document.getElementById('resCalc').textContent='Resultado: '+(num1Calc/num2Calc)
+        }
+            
+       }
+       const calculaAnioBiciesto=()=>{
+            const anio=Number(document.getElementById('anioBiciestoIngresado').value)
+            if((anio%4 ==0 && anio%100!=0) || anio%400==0){
+                document.getElementById('esBiciesto').textContent='Es bisiesto'
+                return
+            }
+            document.getElementById('esBiciesto').textContent='No es bisiesto'
+
+       }
+       const verificarPassword=()=>{
+            const password=document.getElementById('password').value
+            const passwordQumado='12345'
+            if(password===passwordQumado){
+                document.getElementById('accesoPassword').textContent='Acceso concedido'
+                return
+            }
+            document.getElementById('accesoPassword').textContent='Acceso denegado'
+
+       }
+      
+       const numeroAleatorio=parseInt(Math.random()*10,10)
+       const adivinaNumero=()=>{
+            const numeroIngresado=document.getElementById('numeroAdivinar').value       
+            console.log('numero a adivinar',numeroAleatorio);
+            
+            if(numeroIngresado==numeroAleatorio){
+                document.getElementById('numeroAdivinado').textContent='Felicitaciones acertaste!'
+                return
+            }
+            document.getElementById('numeroAdivinado').textContent='Intenta de nuevo'
+
+       }
+ 
+       const singoZodiacal=()=>{
+            const fecha=document.getElementById('fechaZodiaco').value
+            const dia = Number(fecha.substring(0, fecha.search(',')))
+            const mes = fecha.substring(fecha.search(',')+2).toLowerCase()
+            
+            let tuSignoEs='Ingresa una fecha balida ejemplo 12, Septiembre'
+            if ((mes === 3 && dia >= 21) || (mes === 'abril' && dia <= 19)) {
+                tuSignoEs= "Aries";
+            } else if ((mes === 'marzo' && dia >= 20) || (mes === 'mayo' && dia <= 20)) {
+                tuSignoEs= "Aries";
+            } else if ((mes === 'mayo' && dia >= 21) || (mes === 'junio' && dia <= 20)) {
+                tuSignoEs= "Géminis";
+            } else if ((mes === 'junio' && dia >= 21) || (mes === 'julio' && dia <= 22)) {
+                tuSignoEs= "Cáncer";
+            } else if ((mes === 'julio' && dia >= 23) || (mes === 'agosto' && dia <= 22)) {
+                tuSignoEs= "Leo";
+            } else if ((mes === 'agosto' && dia >= 23) || (mes === 'septiembre' && dia <= 22)) {
+                tuSignoEs= "Virgo";
+            } else if ((mes === 'septiembre' && dia >= 23) || (mes === 'octubre' && dia <= 22)) {
+                tuSignoEs= "Libra";
+            } else if ((mes === 'octubre' && dia >= 23) || (mes === 'noviembre' && dia <= 21)) {
+                tuSignoEs= "noviembre";
+            } else if ((mes === 11 && dia >= 22) || (mes === 'diciembre' && dia <= 21)) {
+                tuSignoEs= "Sagitario";
+            } else if ((mes === 'diciembre' && dia >= 22) || (mes === 'enero' && dia <= 19)) {
+                tuSignoEs= "Capricornio";
+            } else if ((mes === 'enero' && dia >= 20) || (mes === 'febrero' && dia <= 18)) {
+                tuSignoEs= "Acuario";
+            } else if ((mes === 'febrero' && dia >= 19) || (mes === 'marzo' && dia <= 20)) {
+                tuSignoEs= "Piscis";
+            }
+            document.getElementById('mostrarSigno').textContent='Tu signo es : '+tuSignoEs
+       }    
+       const sistemaCalificacion=()=>{
+            const calificacion=Number(document.getElementById('numeroCalificacion').value)
+
+            let calificacionLetra='F'
+            if (calificacion>=90 && calificacion<=100) {
+                 calificacionLetra='A'
+            } else if (calificacion>=80 && calificacion<=89) {
+                 calificacionLetra='B'
+            }else if (calificacion>=70 && calificacion<=79) {
+                 calificacionLetra='C'
+            }else if (calificacion>=60 && calificacion<=69) {
+                 calificacionLetra='D'
+            }
+            document.getElementById('letraCalificacion').textContent='Tu calificacion es '+calificacionLetra
+       }
+
+       const controlAcceso=()=>{
+            const accesoUsuario=document.getElementById('accesoUsuario').value
+            const accesoPass=document.getElementById('accesoPass').value
+            const usr='admin'
+            const pass='1234'    
+            if(accesoUsuario==usr && accesoPass==pass){
+                document.getElementById('acceso').textContent='Bienvenido admin'
+            }else{
+                document.getElementById('acceso').textContent='Usuario o pasword incorrecto'
+            }
+       }
+
+       const mostrar1al10=()=>{
+        let serie='1,'
+        for (let i = 1; i <= 10; i++) {
+            serie+=`, ${i}`
+        }
+        document.getElementById('mostrarSerie').textContent=serie
+
+       }
+       mostrar1al10()
+
+
+       const suma10numeros=()=>{
+        let suma=0
+        for (let i = 0; i < 10; i++) {
+            suma+=i
+        }
+        document.getElementById('suma10numeros').textContent=suma
+
+       }
+       suma10numeros()
+
+       const tablaMultiplicar=()=>{
+        const tablaIngresada=Number(document.getElementById('numeroTabla').value)
+        let resultado=``
+        
+        for (let i = 0; i <= 10; i++) {
+            resultado=`<p>${tablaIngresada} X ${i} = ${tablaIngresada*i} </p>`
+            document.getElementById('tablaMultiplicar').innerHTML+=resultado
+        }
+
+       }
+
+       const suma20NumerosPares=()=>{
+        let suma=0
+        for (let i = 2; i <=20; i+=2) {
+            suma+=i
+        }
+        document.getElementById('suma20pares').textContent='Suma 20 pares : '+suma
+
+       }
+       suma20NumerosPares()
+
+       const contadorNegativo=()=>{
+        let serie=''
+        for (let i = 10; i >=0; i--) {
+            serie+=i+', '
+        }
+        document.getElementById('contadorNegativo').textContent=serie
+
+       }
+       contadorNegativo()
+
+       const factorial=()=>{
+        const numero=Number(document.getElementById('numeroFactorial').value)
+        let resultado=1
+        
+        for (let i = numero; i > 1 ; i--) {
+            resultado=resultado*i
+        }
+        document.getElementById('resultadoFactorial').textContent='El factorial de '+numero+' SSes: '+resultado
+
+       }
+
+       
+       const numerosPrimos=()=>{
+        
+        let primos='1, 2, '
+        let esPrimo=true
+        for (let i = 1; i <=50 ; i++) {
+            for (let j = 2; j < i; j++) {
+                if(i%j==0){
+                    esPrimo=false
+                    break
+                }
+            }
+            if(esPrimo==true) primos+=i+', '
+            esPrimo=true
+        }
+        document.getElementById('numerosPrimos').textContent='Los 50 primeros numeros primos son:  '+primos
+
+       }
+       numerosPrimos()
+
+       const sumaDigitos=()=>{
+        const numero =document.getElementById('numeroSumaDigitos').value
+        let suma=0
+        const separacion=numero.split('')
+        for (let i = 0; i < separacion.length; i++) {
+            suma+=Number(separacion[i])
+            
+        }
+        
+        document.getElementById('mostrarSumaDigitos').textContent=separacion+' = '+suma
+
+       }
+
+       const invertirNumero=()=>{
+        const numero =document.getElementById('numeroInvertir').value
+        let invecion=''
+        const separacion=numero.split('')
+        for (let i = separacion.length-1; i >=0; i--) {
+            invecion+=String(separacion[i])+', '
+            
+        }
+        console.log(invecion);
+        
+        document.getElementById('numeroInvertido').textContent='Invercion= '+invecion
+
+       }
+ 
+       const promedioCalificaciones=()=>{
+            let calificacion='0'
+            let suma=0
+            let n=0
+            while(calificacion!='-1'){
+                calificacion=prompt('Ingrese nota (-1 calucular promedio)')
+                if(calificacion!='-1'){
+                    suma+=Number(calificacion)
+                    n++
+                }
+            }
+            alert('El promedio es : '+suma/n)
+            
+            
+
+       }
+       
+       const daludoPersonalizado=()=>{
+        const nombre =document.getElementById('numbreSaludo').value
+        alert('Hola: '+nombre)
+        
+
+       }
+       const sumaDosNumeros=()=>{
+        const num1 =Number(document.getElementById('sumaNum1').value)
+        const num2 =Number(document.getElementById('sumaNum2').value)
+        alert('La suma es: '+(num1+num2))
+        
+
+       }
+       const  parOImpar=()=>{
+        const num1 =Number(document.getElementById('parOImpar').value)
+        
+       if(num1%2==0){
+        alert(true)
+       }else{
+        alert(false)
+       }
+    }
+
+    const  calcularCuadrado=()=>{
+        const num1 =Number(document.getElementById('numeroCuadrado').value)
+        alert(Math.pow(num1,2))
+       }
+    const  calculaAreaCirculo=()=>{
+        const radio =Number(document.getElementById('radio').value)
+        alert(Math.PI*(Math.pow(radio,2)))
+       }
+ </script>
+  
+</body>
+</html>

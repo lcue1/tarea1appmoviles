@@ -1,0 +1,25 @@
+header{
+    display: grid;
+    grid-template-columns : 1fr 1fr  1fr 1fr ;
+    gap: 20px;
+    text-align: center;
+}
+header>*{
+    background-color: rgb(26, 0, 173);
+    border: 5px solid rgb(26, 0, 173);
+    border-radius: 15px;
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    gap:  1rem;
+}
+main>*{
+    background-color: rgb(130, 176, 255);
+    border: 5px solid rgb(130, 176, 255);
+    border-radius: 15px;
+}
