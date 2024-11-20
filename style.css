@@ -1,8 +1,23 @@
 header{
     display: grid;
-    grid-template-columns : 1fr 1fr  1fr 1fr ;
-    gap: 20px;
+    grid-template-columns : repeat(2, 1fr) ;
+    gap: 5px;
     text-align: center;
+}
+.logo{
+    width: 150px;
+    background-color: transparent;
+    border: none;
+}
+.instruccion{
+    grid-column: span 2;
+    text-align: left;
+    background-color: transparent;
+    border: none;
+    color: blue;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-bottom: solid 3px blue;
 }
 header>*{
     background-color: rgb(26, 0, 173);
